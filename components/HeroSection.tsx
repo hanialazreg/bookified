@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const HeroSection = () => {
     return (
-        <section className="wrapper mb-10 md:mb-16">
+        <section className="wrapper pt-28">
             <div className="library-hero-card">
                 <div className="library-hero-content">
                     {/* Left Part */}
@@ -43,7 +43,7 @@ const HeroSection = () => {
                     </div>
 
                     {/* Right Part */}
-                    <div className="library-steps-card min-w-[260px] max-w-[280px] z-10 shadow-soft-md">
+                    <div className="library-steps-card min-w-65 max-w-70 z-10 shadow-soft-md">
                         <ul className="space-y-6">
                             <li className="library-step-item">
                                 <div className="w-10 h-10 min-w-10 min-h-10 rounded-full border border-gray-300 flex items-center justify-center font-medium text-lg">1</div>
