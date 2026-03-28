@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Serif, Mona_Sans} from "next/font/google";
+
 import "./globals.css";
-import React from "react";
+import Navbar from "@/components/Navbar";
 
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
@@ -32,7 +33,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${ibmPlexSerif.variable} ${monaSans.variable} relative font-sans antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+      {children}
+      <Navbar/>
+      </body>
     </html>
   );
 }
