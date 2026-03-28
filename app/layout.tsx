@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Serif, Mona_Sans} from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
-import "./globals.css";
 import Navbar from "@/components/Navbar";
+import "./globals.css";
+
 
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
@@ -18,25 +20,26 @@ const monaSans = Mona_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Bookefied",
-  description: "Transform your book into an interactive AI conversation , upload your PDF and chat with your book using your voice",
+  title: "Bookified",
+  description: "Transform your books into interactive AI conversations. Upload PDFs, and chat with your books using voice.",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${ibmPlexSerif.variable} ${monaSans.variable} relative font-sans antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-      {children}
-      <Navbar/>
-      </body>
-    </html>
+      <ClerkProvider>
+        <html lang="en">
+        <body
+            className={`${ibmPlexSerif.variable} ${monaSans.variable} relative font-sans antialiased`}
+        >
+        <Navbar />
+        {children}
+
+        </body>
+        </html>
+      </ClerkProvider>
   );
 }

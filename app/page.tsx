@@ -1,9 +1,10 @@
 import React from 'react'
+import HeroSection from "@/components/HeroSection";
 
 const Page = () => {
     return (
         <div>
-            <h1 className= "text-2xl underline  "> bookified </h1>
+<HeroSection />
         </div>
     )
 }
