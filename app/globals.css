@@ -620,22 +620,19 @@
         @apply flex gap-4;
     }
     .voice-selector-option {
-        @apply flex-1 flex items-center justify-center gap-3 p-4 border border-[var(--border-subtle)] rounded-lg cursor-pointer transition-all;
+        @apply flex-1 flex items-center gap-4 p-4 border border-[var(--border-subtle)] rounded-xl cursor-pointer transition-all bg-white;
         box-shadow: var(--shadow-soft-sm);
 
         &:hover {
             box-shadow: var(--shadow-soft);
-            transform: translateY(-2px);
         }
     }
     .voice-selector-option-selected {
-        @apply bg-[var(--accent-light)] border-[var(--accent-warm)];
+        @apply bg-[#fff6e5] border-2 border-[#663820];
     }
     .voice-selector-option-default {
-        @apply bg-white;
-
         &:hover {
-            @apply bg-[var(--bg-secondary)];
+            @apply bg-[#f9f7f3];
         }
     }
     .voice-selector-option-disabled {
