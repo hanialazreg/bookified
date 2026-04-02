@@ -239,9 +239,7 @@ const UploadForm = () => {
                 className="upload-dropzone"
               >
                 <ImageIcon className="upload-dropzone-icon" />
-                <p className="upload-dropzone-text">
-                  Click to upload cover image
-                </p>
+                <p className="upload-dropzone-text">upload cover image</p>
                 <p className="upload-dropzone-hint">
                   Leave empty to auto-generate from PDF
                 </p>
